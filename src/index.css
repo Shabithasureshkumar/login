@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #FFFFFF;
+    font-family: 'Inter', 'Manrope', system-ui, sans-serif;
+    color: #19182C;
+    overflow-x: hidden;
+  }
+}
+
+@layer utilities {
+  /* Glassmorphism cards */
+  .glass-card {
+    background: rgba(255, 255, 255, 0.70);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1.05px solid rgba(255, 255, 255, 0.60);
+  }
+
+  .glass-auth-card {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid rgba(222, 206, 255, 0.6);
+  }
+
+  /* Gradient Text Fills */
+  .text-gradient-purple {
+    background: linear-gradient(135deg, #804EFA 0%, #C85DE0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .text-gradient-brand {
+    background: linear-gradient(135deg, #823FEB 0%, #AD74FF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* Perspective Grid Background */
+  .bg-perspective-grid {
+    background-image: 
+      linear-gradient(to right, rgba(167, 139, 250, 0.15) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(167, 139, 250, 0.15) 1px, transparent 1px);
+    background-size: 40px 40px;
+    mask-image: radial-gradient(circle at 50% 50%, black 30%, transparent 80%);
+    -webkit-mask-image: radial-gradient(circle at 50% 50%, black 30%, transparent 80%);
+  }
+
+  .sparkle-glow {
+    box-shadow: 0 0 40px rgba(185, 100, 240, 0.35);
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F4EFFE;
+}
+::-webkit-scrollbar-thumb {
+  background: #C4B5FD;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #A78BFA;
+}
