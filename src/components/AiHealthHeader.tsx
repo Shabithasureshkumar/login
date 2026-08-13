@@ -1,7 +1,6 @@
 import React from 'react';
 import { ChooseDoctorButton } from './ChooseDoctorButton';
-import heroDoctorImg from '../assets/images/hero_doctor.jpg';
-
+import heroDoctorImg from "../assets/images/hero_doctor.png";
 interface AiHealthHeaderProps {
   onChooseDoctor?: () => void;
 }

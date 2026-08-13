@@ -1,7 +1,6 @@
 import React from 'react';
 import { Sparkles, Video, FileText, Activity, Brain, Mic, PhoneOff } from 'lucide-react';
-import heroDoctorImg from '../../assets/images/hero_doctor.jpg';
-
+import heroDoctorImg from '../../assets/images/hero_doctor.png';
 export const AuthHeroSection: React.FC = () => {
   return (
     <div className="relative w-full max-w-[870px] min-h-[716px] flex flex-col justify-between select-none py-2 px-2 sm:px-4">
