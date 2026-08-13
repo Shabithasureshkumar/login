@@ -3,11 +3,10 @@
 @tailwind utilities;
 
 /* =========================================================
-   MEDNEVO — PREMIUM PURPLE AUTH THEME
+   MEDNEVO — PREMIUM PURPLE THEME
 ========================================================= */
 
 @layer base {
-
   * {
     box-sizing: border-box;
   }
@@ -18,7 +17,7 @@
 
   body {
     margin: 0;
-    background: #ffffff;
+    background-color: #ffffff;
     font-family: "Inter", "Manrope", system-ui, sans-serif;
     color: #19182c;
     overflow-x: hidden;
@@ -39,36 +38,12 @@
 }
 
 /* =========================================================
-   UTILITIES
+   CUSTOM TAILWIND UTILITIES
 ========================================================= */
 
 @layer utilities {
-
   /* =======================================================
-     GLASS
-  ======================================================= */
-
-  .glass-card {
-    background: rgba(255, 255, 255, 0.72);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.7);
-  }
-
-  .auth-card {
-    background: rgba(255, 255, 255, 0.93);
-    border: 1px solid rgba(139, 92, 246, 0.32);
-
-    box-shadow:
-      0 30px 70px rgba(91, 33, 182, 0.10),
-      0 10px 30px rgba(124, 58, 237, 0.06);
-
-    backdrop-filter: blur(22px);
-    -webkit-backdrop-filter: blur(22px);
-  }
-
-  /* =======================================================
-     PURPLE TEXT
+     PURPLE GRADIENT TEXT
   ======================================================= */
 
   .text-gradient-purple {
@@ -98,28 +73,6 @@
   }
 
   /* =======================================================
-     PURPLE BUTTON
-  ======================================================= */
-
-  .purple-gradient {
-    background: linear-gradient(
-      135deg,
-      #6d28d9 0%,
-      #7c3aed 50%,
-      #8b5cf6 100%
-    );
-  }
-
-  .purple-gradient:hover {
-    background: linear-gradient(
-      135deg,
-      #5b21b6 0%,
-      #6d28d9 50%,
-      #7c3aed 100%
-    );
-  }
-
-  /* =======================================================
      FULL PAGE PERSPECTIVE GRID
   ======================================================= */
 
@@ -138,94 +91,112 @@
 
     background-size: 42px 42px;
 
-    mask-image:
-      radial-gradient(
-        ellipse at center,
-        black 15%,
-        rgba(0, 0, 0, 0.9) 45%,
-        transparent 88%
-      );
+    mask-image: radial-gradient(
+      ellipse at center,
+      black 15%,
+      rgba(0, 0, 0, 0.9) 45%,
+      transparent 88%
+    );
 
-    -webkit-mask-image:
-      radial-gradient(
-        ellipse at center,
-        black 15%,
-        rgba(0, 0, 0, 0.9) 45%,
-        transparent 88%
-      );
+    -webkit-mask-image: radial-gradient(
+      ellipse at center,
+      black 15%,
+      rgba(0, 0, 0, 0.9) 45%,
+      transparent 88%
+    );
   }
 
   /* =======================================================
-     INTERNAL GRID
+     HERO GRID
   ======================================================= */
 
   .bg-perspective-grid {
     background-image:
       linear-gradient(
         to right,
-        rgba(124, 58, 237, 0.10) 1px,
+        rgba(124, 58, 237, 0.1) 1px,
         transparent 1px
       ),
       linear-gradient(
         to bottom,
-        rgba(124, 58, 237, 0.10) 1px,
+        rgba(124, 58, 237, 0.1) 1px,
         transparent 1px
       );
 
     background-size: 40px 40px;
 
-    mask-image:
-      radial-gradient(
-        circle at center,
-        black 25%,
-        transparent 78%
-      );
+    mask-image: radial-gradient(
+      circle at center,
+      black 25%,
+      transparent 78%
+    );
 
-    -webkit-mask-image:
-      radial-gradient(
-        circle at center,
-        black 25%,
-        transparent 78%
-      );
+    -webkit-mask-image: radial-gradient(
+      circle at center,
+      black 25%,
+      transparent 78%
+    );
   }
 
   /* =======================================================
-     HERO PURPLE GLOWS
+     PURPLE HERO GLOW
   ======================================================= */
 
   .bg-purple-hero-glow {
-    background:
-      radial-gradient(
-        circle,
-        rgba(124, 58, 237, 0.16) 0%,
-        rgba(139, 92, 246, 0.08) 35%,
-        transparent 72%
-      );
+    background: radial-gradient(
+      circle,
+      rgba(124, 58, 237, 0.16) 0%,
+      rgba(139, 92, 246, 0.08) 35%,
+      transparent 72%
+    );
   }
 
   .bg-purple-soft-orb {
-    background:
-      radial-gradient(
-        circle,
-        rgba(168, 85, 247, 0.10) 0%,
-        rgba(139, 92, 246, 0.05) 45%,
-        transparent 75%
-      );
+    background: radial-gradient(
+      circle,
+      rgba(168, 85, 247, 0.1) 0%,
+      rgba(139, 92, 246, 0.05) 45%,
+      transparent 75%
+    );
   }
 
   /* =======================================================
-     PURPLE SHADOWS
+     GLASS CARD
   ======================================================= */
 
-  .shadow-purple {
-    box-shadow:
-      0 12px 35px rgba(124, 58, 237, 0.12);
+  .glass-card {
+    background: rgba(255, 255, 255, 0.72);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.7);
   }
 
-  .shadow-purple-lg {
+  .glass-auth-card {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid rgba(139, 92, 246, 0.28);
+
     box-shadow:
-      0 25px 65px rgba(91, 33, 182, 0.10),
+      0 20px 50px rgba(124, 58, 237, 0.08),
+      0 4px 20px rgba(124, 58, 237, 0.04);
+  }
+
+  /* =======================================================
+     AUTH CARD
+  ======================================================= */
+
+  .auth-card {
+    background: rgba(255, 255, 255, 0.93);
+
+    border: 1px solid rgba(139, 92, 246, 0.32);
+
+    box-shadow:
+      0 25px 65px rgba(91, 33, 182, 0.1),
       0 10px 30px rgba(124, 58, 237, 0.06);
+
+    backdrop-filter: blur(22px);
+    -webkit-backdrop-filter: blur(22px);
   }
 
   /* =======================================================
@@ -233,13 +204,12 @@
   ======================================================= */
 
   .auth-primary-button {
-    background:
-      linear-gradient(
-        135deg,
-        #6d28d9 0%,
-        #7c3aed 50%,
-        #8b5cf6 100%
-      );
+    background: linear-gradient(
+      135deg,
+      #6d28d9 0%,
+      #7c3aed 50%,
+      #8b5cf6 100%
+    );
 
     color: #ffffff;
 
@@ -256,7 +226,7 @@
     transform: translateY(-1px);
 
     box-shadow:
-      0 12px 30px rgba(124, 58, 237, 0.30);
+      0 12px 30px rgba(124, 58, 237, 0.3);
 
     filter: brightness(1.04);
   }
@@ -270,12 +240,11 @@
   ======================================================= */
 
   .auth-secondary-button {
-    background:
-      linear-gradient(
-        135deg,
-        #6d28d9,
-        #7c3aed
-      );
+    background: linear-gradient(
+      135deg,
+      #6d28d9,
+      #7c3aed
+    );
 
     color: #ffffff;
 
@@ -299,89 +268,6 @@
 
   .auth-secondary-button:active {
     transform: translateY(0);
-  }
-
-  /* =======================================================
-     LINKS
-  ======================================================= */
-
-  .purple-link {
-    color: #7c3aed;
-
-    transition:
-      color 0.2s ease,
-      transform 0.2s ease;
-  }
-
-  .purple-link:hover {
-    color: #5b21b6;
-  }
-
-  /* =======================================================
-     FLOATING CARDS
-  ======================================================= */
-
-  .float-card {
-    animation:
-      floatingCard 5s ease-in-out infinite,
-      purpleCardGlow 4s ease-in-out infinite;
-    will-change: transform, box-shadow;
-  }
-
-  .float-card-slow {
-    animation:
-      floatingCardSlow 6.5s ease-in-out infinite,
-      purpleCardGlow 5s ease-in-out infinite;
-    will-change: transform, box-shadow;
-  }
-
-  .float-card-delay-1 {
-    animation:
-      floatingCardDelayOne 5.8s ease-in-out infinite,
-      purpleCardGlow 4.8s ease-in-out infinite;
-    will-change: transform, box-shadow;
-  }
-
-  .float-card-delay-2 {
-    animation:
-      floatingCardDelayTwo 6.2s ease-in-out infinite,
-      purpleCardGlow 5.2s ease-in-out infinite;
-    will-change: transform, box-shadow;
-  }
-
-  /* =======================================================
-     DOCTOR FLOAT
-  ======================================================= */
-
-  .doctor-image-float {
-    animation:
-      doctorFloat 8s ease-in-out infinite;
-    will-change: transform;
-  }
-
-  /* =======================================================
-     DOCTOR GLOW BREATHING
-  ======================================================= */
-
-  .hero-image-glow {
-    animation:
-      heroGlow 5s ease-in-out infinite;
-    will-change: opacity, transform;
-  }
-
-  .hero-breathing-glow {
-    animation:
-      heroBreathingGlow 6s ease-in-out infinite;
-    will-change: opacity, transform;
-  }
-
-  /* =======================================================
-     PROGRESS BAR GLOW
-  ======================================================= */
-
-  .progress-glow {
-    animation:
-      progressGlow 2.8s ease-in-out infinite;
   }
 
   /* =======================================================
@@ -409,144 +295,160 @@
     border-color: #8b5cf6;
 
     box-shadow:
-      0 0 0 3px rgba(139, 92, 246, 0.10);
-  }
-}
-
-/* =========================================================
-   FLOATING ANIMATIONS
-========================================================= */
-
-@keyframes floatingCard {
-
-  0%,
-  100% {
-    transform: translate3d(0, 0, 0);
+      0 0 0 3px rgba(139, 92, 246, 0.1);
   }
 
-  50% {
-    transform: translate3d(0, -13px, 0);
-  }
-}
+  /* =======================================================
+     SOCIAL LOGIN BUTTON
+  ======================================================= */
 
-@keyframes floatingCardSlow {
+  .social-login-button {
+    background: #ffffff;
+    border: 1px solid #ebe7f7;
+    color: #19182c;
 
-  0%,
-  100% {
-    transform: translate3d(0, 0, 0);
-  }
-
-  50% {
-    transform: translate3d(0, -10px, 0);
-  }
-}
-
-@keyframes floatingCardDelayOne {
-
-  0%,
-  100% {
-    transform: translate3d(0, 0, 0);
+    transition:
+      border-color 0.2s ease,
+      background-color 0.2s ease,
+      box-shadow 0.2s ease,
+      transform 0.2s ease;
   }
 
-  50% {
-    transform: translate3d(0, -11px, 0);
-  }
-}
+  .social-login-button:hover {
+    background: #faf9ff;
+    border-color: #c4b5fd;
 
-@keyframes floatingCardDelayTwo {
-
-  0%,
-  100% {
-    transform: translate3d(0, 0, 0);
-  }
-
-  50% {
-    transform: translate3d(0, -9px, 0);
-  }
-}
-
-/* =========================================================
-   DOCTOR FLOAT
-========================================================= */
-
-@keyframes doctorFloat {
-
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-5px);
-  }
-}
-
-/* =========================================================
-   PURPLE CARD GLOW
-========================================================= */
-
-@keyframes purpleCardGlow {
-
-  0%,
-  100% {
     box-shadow:
-      0 15px 45px rgba(80, 50, 150, 0.12);
+      0 5px 15px rgba(124, 58, 237, 0.08);
+
+    transform: translateY(-1px);
   }
 
-  50% {
+  /* =======================================================
+     PURPLE LINKS
+  ======================================================= */
+
+  .purple-link {
+    color: #7c3aed;
+
+    transition:
+      color 0.2s ease,
+      transform 0.2s ease;
+  }
+
+  .purple-link:hover {
+    color: #5b21b6;
+  }
+
+  /* =======================================================
+     ICON STYLES
+  ======================================================= */
+
+  .icon-purple {
+    background: #f3efff;
+    color: #7c3aed;
+    border: 1px solid rgba(124, 58, 237, 0.12);
+  }
+
+  .icon-purple-solid {
+    background: linear-gradient(
+      135deg,
+      #6d28d9,
+      #8b5cf6
+    );
+
+    color: #ffffff;
+  }
+
+  /* =======================================================
+     PURPLE GRADIENT
+  ======================================================= */
+
+  .purple-gradient {
+    background: linear-gradient(
+      135deg,
+      #6d28d9 0%,
+      #7c3aed 50%,
+      #8b5cf6 100%
+    );
+  }
+
+  .purple-gradient:hover {
+    background: linear-gradient(
+      135deg,
+      #5b21b6 0%,
+      #6d28d9 50%,
+      #7c3aed 100%
+    );
+  }
+
+  /* =======================================================
+     PURPLE GLOW
+  ======================================================= */
+
+  .sparkle-glow {
     box-shadow:
-      0 18px 50px rgba(124, 58, 237, 0.20),
-      0 0 25px rgba(139, 92, 246, 0.08);
-  }
-}
-
-/* =========================================================
-   HERO GLOW
-========================================================= */
-
-@keyframes heroGlow {
-
-  0%,
-  100% {
-    opacity: 0.55;
-    transform: translate(-50%, -50%) scale(0.96);
+      0 0 40px rgba(124, 58, 237, 0.25),
+      0 0 80px rgba(139, 92, 246, 0.08);
   }
 
-  50% {
-    opacity: 0.90;
-    transform: translate(-50%, -50%) scale(1.05);
-  }
-}
-
-@keyframes heroBreathingGlow {
-
-  0%,
-  100% {
-    opacity: 0.45;
-    transform: translate(-50%, -50%) scale(0.95);
+  .purple-glow {
+    box-shadow:
+      0 8px 30px rgba(124, 58, 237, 0.18),
+      0 0 50px rgba(139, 92, 246, 0.08);
   }
 
-  50% {
-    opacity: 0.80;
-    transform: translate(-50%, -50%) scale(1.08);
-  }
-}
+  /* =======================================================
+     SOFT PURPLE BACKGROUNDS
+  ======================================================= */
 
-/* =========================================================
-   PROGRESS GLOW
-========================================================= */
-
-@keyframes progressGlow {
-
-  0%,
-  100% {
-    filter: brightness(1);
+  .bg-purple-soft {
+    background: #faf8ff;
   }
 
-  50% {
-    filter:
-      brightness(1.18)
-      drop-shadow(0 0 5px rgba(139, 92, 246, 0.35));
+  .bg-purple-light {
+    background: #f5f3ff;
+  }
+
+  /* =======================================================
+     PURPLE BORDER
+  ======================================================= */
+
+  .border-purple-soft {
+    border: 1px solid rgba(124, 58, 237, 0.18);
+  }
+
+  .border-purple {
+    border: 1px solid rgba(124, 58, 237, 0.3);
+  }
+
+  /* =======================================================
+     PURPLE ORB
+  ======================================================= */
+
+  .purple-orb {
+    background: radial-gradient(
+      circle,
+      rgba(139, 92, 246, 0.18) 0%,
+      rgba(124, 58, 237, 0.08) 45%,
+      transparent 75%
+    );
+
+    filter: blur(1px);
+  }
+
+  /* =======================================================
+     SHADOWS
+  ======================================================= */
+
+  .shadow-purple {
+    box-shadow:
+      0 12px 35px rgba(124, 58, 237, 0.12);
+  }
+
+  .shadow-purple-lg {
+    box-shadow:
+      0 20px 55px rgba(124, 58, 237, 0.14);
   }
 }
 
@@ -573,7 +475,7 @@
 }
 
 /* =========================================================
-   SELECTION
+   TEXT SELECTION
 ========================================================= */
 
 ::selection {
@@ -582,7 +484,7 @@
 }
 
 /* =========================================================
-   FOCUS
+   FOCUS ACCESSIBILITY
 ========================================================= */
 
 :focus-visible {
@@ -591,39 +493,17 @@
 }
 
 /* =========================================================
-   REDUCE MOTION ACCESSIBILITY
-========================================================= */
-
-@media (prefers-reduced-motion: reduce) {
-
-  .float-card,
-  .float-card-slow,
-  .float-card-delay-1,
-  .float-card-delay-2,
-  .doctor-image-float,
-  .hero-image-glow,
-  .hero-breathing-glow,
-  .progress-glow {
-    animation: none !important;
-  }
-}
-
-/* =========================================================
-   MOBILE
+   RESPONSIVE GRID
 ========================================================= */
 
 @media (max-width: 1023px) {
-
   .bg-perspective-grid-full {
     opacity: 0.45;
   }
-
 }
 
 @media (max-width: 640px) {
-
   .bg-perspective-grid-full {
     background-size: 34px 34px;
   }
-
 }

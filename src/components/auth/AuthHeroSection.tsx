@@ -28,31 +28,30 @@ export const AuthHeroSection: React.FC = () => {
         sm:px-4
       "
     >
-
-      {/* =========================================================
-          HERO CENTER PURPLE GLOW
-      ========================================================= */}
+      {/* =====================================================
+          SOFT PURPLE HERO GLOW
+      ====================================================== */}
       <div
         className="
           absolute
-          top-[22%]
-          left-[54%]
+          top-[48%]
+          left-[58%]
           -translate-x-1/2
           -translate-y-1/2
-          w-[500px]
-          h-[500px]
+          w-[520px]
+          h-[520px]
           rounded-full
-          bg-purple-hero-glow
+          bg-[radial-gradient(circle,_rgba(124,58,237,0.16)_0%,_rgba(139,92,246,0.07)_42%,_transparent_72%)]
           blur-3xl
           pointer-events-none
           z-0
-          hero-breathing-glow
+          animate-hero-breathing-glow
         "
       />
 
-      {/* =========================================================
-          INTERNAL GRID — SUBTLE
-      ========================================================= */}
+      {/* =====================================================
+          SUBTLE GRID
+      ====================================================== */}
       <div
         className="
           absolute
@@ -60,16 +59,16 @@ export const AuthHeroSection: React.FC = () => {
           pointer-events-none
           overflow-hidden
           rounded-[40px]
-          opacity-30
+          opacity-25
           z-0
         "
       >
         <div className="absolute inset-0 bg-perspective-grid" />
       </div>
 
-      {/* =========================================================
-          MAIN HERO GRID
-      ========================================================= */}
+      {/* =====================================================
+          MAIN CONTENT
+      ====================================================== */}
       <div
         className="
           relative
@@ -84,10 +83,9 @@ export const AuthHeroSection: React.FC = () => {
           lg:min-h-[720px]
         "
       >
-
-        {/* =======================================================
+        {/* ===================================================
             LEFT CONTENT
-        ======================================================= */}
+        ==================================================== */}
         <div
           className="
             lg:col-span-6
@@ -101,10 +99,8 @@ export const AuthHeroSection: React.FC = () => {
             lg:pr-4
           "
         >
-
           {/* BRAND */}
           <div className="flex items-center gap-3">
-
             <div
               className="
                 w-[40px]
@@ -120,9 +116,7 @@ export const AuthHeroSection: React.FC = () => {
                 shadow-[0_0_30px_rgba(124,58,237,0.30)]
               "
             >
-              <Activity
-                className="w-[19px] h-[19px] text-white stroke-[2.5]"
-              />
+              <Activity className="w-[19px] h-[19px] text-white stroke-[2.5]" />
             </div>
 
             <span
@@ -135,18 +129,12 @@ export const AuthHeroSection: React.FC = () => {
               "
             >
               Med
-              <span className="text-gradient-purple">
-                nevo
-              </span>
+              <span className="text-gradient-purple">nevo</span>
             </span>
-
           </div>
 
-          {/* =====================================================
-              HEADLINE
-          ===================================================== */}
+          {/* HEADLINE */}
           <div className="pt-1">
-
             <h1
               className="
                 text-[42px]
@@ -162,23 +150,17 @@ export const AuthHeroSection: React.FC = () => {
             >
               Healthcare
               <br />
-
               That
               <br />
-
               Understands
               <br />
-
               <span className="text-gradient-purple">
                 You Better.
               </span>
             </h1>
-
           </div>
 
-          {/* =====================================================
-              DESCRIPTION
-          ===================================================== */}
+          {/* DESCRIPTION */}
           <p
             className="
               text-[14px]
@@ -190,18 +172,14 @@ export const AuthHeroSection: React.FC = () => {
             "
           >
             Intelligent, secure, and always-on care. Mednevo blends
-            AI-driven insights with real specialists to deliver
-            healthcare designed around you.
+            AI-driven insights with real specialists to deliver healthcare
+            designed around you.
           </p>
 
-          {/* =====================================================
-              FEATURES
-          ===================================================== */}
+          {/* FEATURES */}
           <div className="flex flex-col space-y-3 pt-1">
-
             {/* FEATURE 1 */}
             <div className="flex items-center gap-3">
-
               <div
                 className="
                   w-[42px]
@@ -229,12 +207,10 @@ export const AuthHeroSection: React.FC = () => {
                   Personalized analysis in seconds
                 </p>
               </div>
-
             </div>
 
             {/* FEATURE 2 */}
             <div className="flex items-center gap-3">
-
               <div
                 className="
                   w-[42px]
@@ -262,12 +238,10 @@ export const AuthHeroSection: React.FC = () => {
                   Talk to specialists anywhere
                 </p>
               </div>
-
             </div>
 
             {/* FEATURE 3 */}
             <div className="flex items-center gap-3">
-
               <div
                 className="
                   w-[42px]
@@ -295,16 +269,13 @@ export const AuthHeroSection: React.FC = () => {
                   Digital records, instantly
                 </p>
               </div>
-
             </div>
-
           </div>
-
         </div>
 
-        {/* =======================================================
-            DOCTOR AREA
-        ======================================================= */}
+        {/* ===================================================
+            DOCTOR + FLOATING CARDS
+        ==================================================== */}
         <div
           className="
             lg:col-span-6
@@ -319,10 +290,7 @@ export const AuthHeroSection: React.FC = () => {
             lg:mt-0
           "
         >
-
-          {/* =====================================================
-              DOCTOR GLOW
-          ===================================================== */}
+          {/* DOCTOR GLOW */}
           <div
             className="
               absolute
@@ -333,17 +301,15 @@ export const AuthHeroSection: React.FC = () => {
               w-[390px]
               h-[560px]
               rounded-full
-              bg-[radial-gradient(ellipse_at_center,_rgba(124,58,237,0.20)_0%,_rgba(139,92,246,0.08)_45%,_transparent_72%)]
+              bg-[radial-gradient(ellipse_at_center,_rgba(124,58,237,0.18)_0%,_rgba(139,92,246,0.07)_45%,_transparent_72%)]
               blur-2xl
               pointer-events-none
               z-0
-              hero-image-glow
+              animate-hero-image-glow
             "
           />
 
-          {/* =====================================================
-              DOCTOR IMAGE
-          ===================================================== */}
+          {/* DOCTOR IMAGE */}
           <div
             className="
               relative
@@ -352,12 +318,12 @@ export const AuthHeroSection: React.FC = () => {
               sm:w-[370px]
               md:w-[420px]
               lg:w-[470px]
-              xl:w-[510px]
+              xl:w-[500px]
               h-[500px]
               sm:h-[590px]
               md:h-[640px]
               lg:h-[690px]
-              xl:h-[720px]
+              xl:h-[710px]
               rounded-[36px]
               lg:rounded-b-[170px]
               overflow-hidden
@@ -365,41 +331,35 @@ export const AuthHeroSection: React.FC = () => {
               border-white/40
               flex
               items-end
-              doctor-image-float
+              animate-doctor-float
             "
           >
-
             <img
               src={heroDoctorImg}
               alt="Indian female doctor holding tablet"
-              className="
-                w-full
-                h-full
-                object-cover
-                object-top
-              "
+              className="w-full h-full object-cover object-top"
             />
-
           </div>
 
-          {/* =====================================================
-              CARD 1 — AI SYMPTOM CHECKER
-          ===================================================== */}
+          {/* =================================================
+              AI SYMPTOM CHECKER
+              FAR RIGHT — CLEAR OF FACE
+          ================================================= */}
           <div
             className="
               absolute
-              top-[7%]
-              right-[0px]
-              sm:right-[10px]
-              lg:right-[-5px]
-              xl:right-[-15px]
+              top-[5%]
+              right-[-105px]
+              sm:right-[-85px]
+              lg:right-[-105px]
+              xl:right-[-120px]
               z-30
-              w-[220px]
-              sm:w-[240px]
-              xl:w-[250px]
+              w-[215px]
+              sm:w-[235px]
+              xl:w-[245px]
               p-3.5
               rounded-[18px]
-              bg-white/80
+              bg-white/90
               backdrop-blur-[22px]
               border
               border-white/90
@@ -407,12 +367,11 @@ export const AuthHeroSection: React.FC = () => {
               flex
               flex-col
               space-y-2
-              float-card
+              animate-float-card
+              animate-purple-glow
             "
           >
-
             <div className="flex items-center gap-2.5">
-
               <div
                 className="
                   w-[36px]
@@ -436,13 +395,10 @@ export const AuthHeroSection: React.FC = () => {
                   Analysis complete
                 </p>
               </div>
-
             </div>
 
             <div className="pt-1 flex flex-col space-y-1">
-
               <div className="flex justify-between text-[11px]">
-
                 <span className="text-[#626079]">
                   Match confidence
                 </span>
@@ -450,11 +406,9 @@ export const AuthHeroSection: React.FC = () => {
                 <span className="text-[#6D28D9] font-semibold">
                   92%
                 </span>
-
               </div>
 
               <div className="w-full h-[7px] bg-[#F1ECFF] rounded-full overflow-hidden">
-
                 <div
                   className="
                     h-full
@@ -464,34 +418,32 @@ export const AuthHeroSection: React.FC = () => {
                     from-[#6D28D9]
                     via-[#7C3AED]
                     to-[#A855F7]
-                    progress-glow
+                    animate-progress-glow
                   "
                 />
-
               </div>
-
             </div>
-
           </div>
 
-          {/* =====================================================
-              CARD 2 — HEALTH SCORE
-          ===================================================== */}
+          {/* =================================================
+              HEALTH SCORE
+              RIGHT SIDE
+          ================================================= */}
           <div
             className="
               absolute
-              top-[43%]
-              right-[-5px]
-              sm:right-[5px]
-              lg:right-[-15px]
-              xl:right-[-25px]
+              top-[40%]
+              right-[-105px]
+              sm:right-[-85px]
+              lg:right-[-110px]
+              xl:right-[-125px]
               z-30
               w-[205px]
               sm:w-[225px]
               xl:w-[235px]
               p-3.5
               rounded-[18px]
-              bg-white/80
+              bg-white/90
               backdrop-blur-[22px]
               border
               border-white/90
@@ -499,14 +451,12 @@ export const AuthHeroSection: React.FC = () => {
               flex
               flex-col
               space-y-2
-              float-card-slow
+              animate-float-card-slow
+              animate-purple-glow-slow
             "
           >
-
             <div className="flex items-center justify-between">
-
               <div className="flex items-center gap-2">
-
                 <div
                   className="
                     w-[36px]
@@ -524,13 +474,11 @@ export const AuthHeroSection: React.FC = () => {
                 <span className="text-[13px] font-semibold text-[#19182C]">
                   Health Score
                 </span>
-
               </div>
 
               <span className="text-[23px] font-extrabold text-gradient-purple">
                 82
               </span>
-
             </div>
 
             <svg
@@ -565,27 +513,27 @@ export const AuthHeroSection: React.FC = () => {
             <p className="text-[11px] text-[#626079]">
               +6 pts this week
             </p>
-
           </div>
 
-          {/* =====================================================
-              CARD 3 — PRESCRIPTION
-          ===================================================== */}
+          {/* =================================================
+              PRESCRIPTION
+              LEFT LOWER SIDE
+          ================================================= */}
           <div
             className="
               absolute
-              bottom-[15%]
-              left-[-5px]
-              sm:left-[5px]
-              lg:left-[-20px]
-              xl:left-[-35px]
+              bottom-[13%]
+              left-[-75px]
+              sm:left-[-60px]
+              lg:left-[-80px]
+              xl:left-[-95px]
               z-30
               w-[205px]
               sm:w-[225px]
               xl:w-[235px]
               p-3.5
               rounded-[18px]
-              bg-white/80
+              bg-white/90
               backdrop-blur-[22px]
               border
               border-white/90
@@ -593,10 +541,10 @@ export const AuthHeroSection: React.FC = () => {
               flex
               items-center
               gap-3
-              float-card-delay-1
+              animate-float-card-delay-1
+              animate-purple-glow
             "
           >
-
             <div
               className="
                 w-[38px]
@@ -613,8 +561,14 @@ export const AuthHeroSection: React.FC = () => {
             </div>
 
             <div>
-
-              <h5 className="text-[13px] font-semibold text-[#19182C] leading-snug">
+              <h5
+                className="
+                  text-[13px]
+                  font-semibold
+                  text-[#19182C]
+                  leading-snug
+                "
+              >
                 Prescription
                 <br />
                 Generated
@@ -623,29 +577,28 @@ export const AuthHeroSection: React.FC = () => {
               <p className="text-[10.5px] text-[#626079]">
                 Ready to download
               </p>
-
             </div>
-
           </div>
 
-          {/* =====================================================
-              CARD 4 — LIVE CONSULTATION
-          ===================================================== */}
+          {/* =================================================
+              LIVE CONSULTATION
+              BOTTOM RIGHT
+          ================================================= */}
           <div
             className="
               absolute
-              bottom-[2%]
-              right-[0px]
-              sm:right-[10px]
-              lg:right-[-10px]
-              xl:right-[-20px]
+              bottom-[0%]
+              right-[-105px]
+              sm:right-[-85px]
+              lg:right-[-105px]
+              xl:right-[-120px]
               z-30
               w-[220px]
               sm:w-[240px]
               xl:w-[250px]
               p-3.5
               rounded-[18px]
-              bg-white/80
+              bg-white/90
               backdrop-blur-[22px]
               border
               border-white/90
@@ -653,14 +606,12 @@ export const AuthHeroSection: React.FC = () => {
               flex
               flex-col
               space-y-3
-              float-card-delay-2
+              animate-float-card-delay-2
+              animate-purple-glow-slow
             "
           >
-
             <div className="flex items-center gap-3">
-
               <div className="relative">
-
                 <div
                   className="
                     w-[40px]
@@ -695,11 +646,9 @@ export const AuthHeroSection: React.FC = () => {
                     border-white
                   "
                 />
-
               </div>
 
               <div>
-
                 <h5 className="text-[13px] font-semibold text-[#19182C]">
                   Dr. Anya Rao
                 </h5>
@@ -707,9 +656,7 @@ export const AuthHeroSection: React.FC = () => {
                 <p className="text-[10.5px] text-[#6D28D9] font-medium">
                   Live consultation
                 </p>
-
               </div>
-
             </div>
 
             <div
@@ -723,7 +670,6 @@ export const AuthHeroSection: React.FC = () => {
                 border-purple-100/70
               "
             >
-
               {/* MIC */}
               <button
                 type="button"
@@ -781,13 +727,9 @@ export const AuthHeroSection: React.FC = () => {
               >
                 <PhoneOff className="w-[15px] h-[15px]" />
               </button>
-
             </div>
-
           </div>
-
         </div>
-
       </div>
     </div>
   );
