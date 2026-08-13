@@ -2,71 +2,411 @@
 @tailwind components;
 @tailwind utilities;
 
+/* =========================================================
+   MEDNEVO — PREMIUM PURPLE THEME
+   ========================================================= */
+
 @layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
-    background-color: #FFFFFF;
-    font-family: 'Inter', 'Manrope', system-ui, sans-serif;
-    color: #19182C;
+    margin: 0;
+    background-color: #ffffff;
+    font-family: "Inter", "Manrope", system-ui, sans-serif;
+    color: #19182c;
     overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  button,
+  input,
+  textarea,
+  select {
+    font-family: inherit;
+  }
+
+  button {
+    cursor: pointer;
   }
 }
 
 @layer utilities {
-  /* Glassmorphism cards */
+  /* =========================================================
+     GLASSMORPHISM
+     ========================================================= */
+
   .glass-card {
-    background: rgba(255, 255, 255, 0.70);
+    background: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    border: 1.05px solid rgba(255, 255, 255, 0.60);
+    border: 1px solid rgba(255, 255, 255, 0.6);
   }
 
   .glass-auth-card {
-    background: rgba(255, 255, 255, 0.85);
+    background: rgba(255, 255, 255, 0.9);
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px);
-    border: 1px solid rgba(222, 206, 255, 0.6);
+    border: 1px solid rgba(139, 92, 246, 0.28);
+    box-shadow:
+      0 20px 50px rgba(124, 58, 237, 0.08),
+      0 4px 20px rgba(124, 58, 237, 0.04);
   }
 
-  /* Gradient Text Fills */
+  /* =========================================================
+     PURPLE GRADIENT TEXT
+     ========================================================= */
+
   .text-gradient-purple {
-    background: linear-gradient(135deg, #804EFA 0%, #C85DE0 100%);
+    background: linear-gradient(
+      135deg,
+      #6d28d9 0%,
+      #7c3aed 45%,
+      #8b5cf6 100%
+    );
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 
   .text-gradient-brand {
-    background: linear-gradient(135deg, #823FEB 0%, #AD74FF 100%);
+    background: linear-gradient(
+      135deg,
+      #5b21b6 0%,
+      #7c3aed 50%,
+      #8b5cf6 100%
+    );
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 
-  /* Perspective Grid Background */
-  .bg-perspective-grid {
-    background-image: 
-      linear-gradient(to right, rgba(167, 139, 250, 0.15) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(167, 139, 250, 0.15) 1px, transparent 1px);
-    background-size: 40px 40px;
-    mask-image: radial-gradient(circle at 50% 50%, black 30%, transparent 80%);
-    -webkit-mask-image: radial-gradient(circle at 50% 50%, black 30%, transparent 80%);
+  /* =========================================================
+     PURPLE BUTTON GRADIENT
+     ========================================================= */
+
+  .purple-gradient {
+    background: linear-gradient(
+      135deg,
+      #6d28d9 0%,
+      #7c3aed 50%,
+      #8b5cf6 100%
+    );
   }
 
+  .purple-gradient:hover {
+    background: linear-gradient(
+      135deg,
+      #5b21b6 0%,
+      #6d28d9 50%,
+      #7c3aed 100%
+    );
+  }
+
+  /* =========================================================
+     PERSPECTIVE GRID BACKGROUND
+     ========================================================= */
+
+  .bg-perspective-grid {
+    background-image:
+      linear-gradient(
+        to right,
+        rgba(124, 58, 237, 0.1) 1px,
+        transparent 1px
+      ),
+      linear-gradient(
+        to bottom,
+        rgba(124, 58, 237, 0.1) 1px,
+        transparent 1px
+      );
+
+    background-size: 40px 40px;
+
+    mask-image: radial-gradient(
+      circle at 50% 50%,
+      black 30%,
+      transparent 80%
+    );
+
+    -webkit-mask-image: radial-gradient(
+      circle at 50% 50%,
+      black 30%,
+      transparent 80%
+    );
+  }
+
+  /* =========================================================
+     PURPLE GLOW
+     ========================================================= */
+
   .sparkle-glow {
-    box-shadow: 0 0 40px rgba(185, 100, 240, 0.35);
+    box-shadow:
+      0 0 40px rgba(124, 58, 237, 0.25),
+      0 0 80px rgba(139, 92, 246, 0.08);
+  }
+
+  .purple-glow {
+    box-shadow:
+      0 8px 30px rgba(124, 58, 237, 0.18),
+      0 0 50px rgba(139, 92, 246, 0.08);
+  }
+
+  /* =========================================================
+     PURPLE SOFT BACKGROUND
+     ========================================================= */
+
+  .bg-purple-soft {
+    background: #faf8ff;
+  }
+
+  .bg-purple-light {
+    background: #f5f3ff;
+  }
+
+  /* =========================================================
+     PURPLE BORDER
+     ========================================================= */
+
+  .border-purple-soft {
+    border: 1px solid rgba(124, 58, 237, 0.18);
+  }
+
+  .border-purple {
+    border: 1px solid rgba(124, 58, 237, 0.3);
+  }
+
+  /* =========================================================
+     INPUT STYLE
+     ========================================================= */
+
+  .input-purple {
+    background: #faf9ff;
+    border: 1px solid #e5defd;
+    color: #19182c;
+    transition:
+      border-color 0.2s ease,
+      box-shadow 0.2s ease,
+      background-color 0.2s ease;
+  }
+
+  .input-purple::placeholder {
+    color: #a3a0b5;
+  }
+
+  .input-purple:focus {
+    outline: none;
+    background: #ffffff;
+    border-color: #8b5cf6;
+    box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
+  }
+
+  /* =========================================================
+     PURPLE ICON CONTAINER
+     ========================================================= */
+
+  .icon-purple {
+    background: #f3efff;
+    color: #7c3aed;
+    border: 1px solid rgba(124, 58, 237, 0.12);
+  }
+
+  .icon-purple-solid {
+    background: linear-gradient(
+      135deg,
+      #6d28d9,
+      #8b5cf6
+    );
+    color: #ffffff;
+  }
+
+  /* =========================================================
+     AUTH CARD
+     ========================================================= */
+
+  .auth-card {
+    background: rgba(255, 255, 255, 0.92);
+    border: 1px solid rgba(139, 92, 246, 0.3);
+    box-shadow:
+      0 25px 60px rgba(91, 33, 182, 0.08),
+      0 8px 25px rgba(124, 58, 237, 0.05);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+
+  /* =========================================================
+     AUTH PRIMARY BUTTON
+     ========================================================= */
+
+  .auth-primary-button {
+    background: linear-gradient(
+      135deg,
+      #6d28d9 0%,
+      #7c3aed 50%,
+      #8b5cf6 100%
+    );
+
+    color: #ffffff;
+
+    box-shadow:
+      0 8px 20px rgba(124, 58, 237, 0.22);
+
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease,
+      filter 0.2s ease;
+  }
+
+  .auth-primary-button:hover {
+    transform: translateY(-1px);
+
+    box-shadow:
+      0 10px 25px rgba(124, 58, 237, 0.3);
+
+    filter: brightness(1.03);
+  }
+
+  .auth-primary-button:active {
+    transform: translateY(0);
+  }
+
+  /* =========================================================
+     SECONDARY AUTH BUTTON
+     ========================================================= */
+
+  .auth-secondary-button {
+    background: linear-gradient(
+      135deg,
+      #6d28d9,
+      #7c3aed
+    );
+
+    color: #ffffff;
+
+    box-shadow:
+      0 6px 18px rgba(124, 58, 237, 0.15);
+
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease;
+  }
+
+  .auth-secondary-button:hover {
+    transform: translateY(-1px);
+
+    box-shadow:
+      0 8px 22px rgba(124, 58, 237, 0.22);
+  }
+
+  /* =========================================================
+     SOCIAL LOGIN BUTTON
+     ========================================================= */
+
+  .social-login-button {
+    background: #ffffff;
+    border: 1px solid #ebe7f7;
+    color: #19182c;
+
+    transition:
+      border-color 0.2s ease,
+      background-color 0.2s ease,
+      box-shadow 0.2s ease,
+      transform 0.2s ease;
+  }
+
+  .social-login-button:hover {
+    background: #faf9ff;
+    border-color: #c4b5fd;
+
+    box-shadow:
+      0 5px 15px rgba(124, 58, 237, 0.08);
+
+    transform: translateY(-1px);
+  }
+
+  /* =========================================================
+     LINKS
+     ========================================================= */
+
+  .purple-link {
+    color: #7c3aed;
+    transition: color 0.2s ease;
+  }
+
+  .purple-link:hover {
+    color: #5b21b6;
+  }
+
+  /* =========================================================
+     DECORATIVE PURPLE ORB
+     ========================================================= */
+
+  .purple-orb {
+    background: radial-gradient(
+      circle,
+      rgba(139, 92, 246, 0.18) 0%,
+      rgba(124, 58, 237, 0.08) 45%,
+      transparent 75%
+    );
+    filter: blur(1px);
+  }
+
+  /* =========================================================
+     PREMIUM SHADOW
+     ========================================================= */
+
+  .shadow-purple {
+    box-shadow:
+      0 12px 35px rgba(124, 58, 237, 0.12);
+  }
+
+  .shadow-purple-lg {
+    box-shadow:
+      0 20px 55px rgba(124, 58, 237, 0.14);
   }
 }
 
-/* Custom scrollbar */
+/* =========================================================
+   CUSTOM SCROLLBAR
+   ========================================================= */
+
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
 }
+
 ::-webkit-scrollbar-track {
-  background: #F4EFFE;
+  background: #f5f3ff;
 }
+
 ::-webkit-scrollbar-thumb {
-  background: #C4B5FD;
+  background: #c4b5fd;
   border-radius: 9999px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
-  background: #A78BFA;
+  background: #8b5cf6;
+}
+
+/* =========================================================
+   SELECTION
+   ========================================================= */
+
+::selection {
+  background: rgba(124, 58, 237, 0.18);
+  color: #4c1d95;
+}
+
+/* =========================================================
+   FOCUS ACCESSIBILITY
+   ========================================================= */
+
+:focus-visible {
+  outline: 2px solid #8b5cf6;
+  outline-offset: 2px;
 }
