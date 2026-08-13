@@ -18,50 +18,158 @@ export const LoginPage: React.FC<LoginPageProps> = ({ onNavigate }) => {
   };
 
   return (
-    <div className="min-h-screen w-full bg-white flex items-center justify-center p-4 sm:p-6 lg:p-12 relative overflow-x-hidden">
+    <div className="relative min-h-screen w-full bg-white flex items-center justify-center px-4 py-6 sm:px-6 lg:px-8 xl:px-10 overflow-hidden">
 
-      {/* Main Container */}
-      <div className="w-full max-w-[1440px] flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12 mx-auto">
+      {/* =========================================================
+          FULL PAGE PURPLE PERSPECTIVE GRID
+      ========================================================= */}
+      <div
+        className="
+          absolute
+          inset-0
+          pointer-events-none
+          z-0
+          bg-perspective-grid-full
+          opacity-70
+        "
+      />
 
-        {/* LEFT COLUMN */}
-        <div className="w-full lg:w-1/2 flex justify-center">
+      {/* =========================================================
+          SOFT PURPLE BACKGROUND GLOW
+      ========================================================= */}
+      <div
+        className="
+          absolute
+          left-[20%]
+          top-[35%]
+          -translate-x-1/2
+          -translate-y-1/2
+          w-[520px]
+          h-[520px]
+          rounded-full
+          bg-purple-hero-glow
+          blur-3xl
+          pointer-events-none
+          z-0
+        "
+      />
+
+      <div
+        className="
+          absolute
+          right-[18%]
+          top-[40%]
+          w-[420px]
+          h-[420px]
+          rounded-full
+          bg-purple-soft-orb
+          blur-3xl
+          pointer-events-none
+          z-0
+        "
+      />
+
+      {/* =========================================================
+          MAIN CONTAINER
+      ========================================================= */}
+      <div
+        className="
+          relative
+          z-10
+          w-full
+          max-w-[1500px]
+          min-h-[720px]
+          flex
+          flex-col
+          lg:flex-row
+          items-center
+          justify-between
+          gap-8
+          xl:gap-12
+          mx-auto
+        "
+      >
+
+        {/* =======================================================
+            LEFT HERO
+        ======================================================= */}
+        <div
+          className="
+            w-full
+            lg:w-[64%]
+            xl:w-[66%]
+            flex
+            justify-center
+            items-center
+          "
+        >
           <AuthHeroSection />
         </div>
 
-        {/* RIGHT COLUMN */}
-        <div className="w-full lg:w-[450px] shrink-0 flex justify-center">
+        {/* =======================================================
+            RIGHT LOGIN
+        ======================================================= */}
+        <div
+          className="
+            w-full
+            lg:w-[390px]
+            xl:w-[420px]
+            2xl:w-[440px]
+            shrink-0
+            flex
+            justify-center
+            items-center
+          "
+        >
 
-          {/* Authentication Card */}
+          {/* =====================================================
+              AUTH CARD
+          ===================================================== */}
           <div
             className="
+              auth-card
+              relative
               w-full
-              max-w-[450px]
-              bg-white/90
-              backdrop-blur-[18px]
-              border-[3px]
-              border-[#DECEFF]
-              rounded-[32px]
-              sm:rounded-[38px]
-              lg:rounded-[41.6px]
+              max-w-[440px]
+              rounded-[30px]
+              sm:rounded-[34px]
+              lg:rounded-[38px]
               p-6
-              sm:p-8
-              lg:p-9
-              shadow-[0_52px_78px_-19.5px_rgba(79,55,138,0.08)]
+              sm:p-7
+              lg:p-8
+              xl:p-9
               flex
               flex-col
-              space-y-6
+              space-y-5
+              lg:space-y-5.5
+              shadow-purple-lg
             "
           >
 
-            {/* Logo */}
-            <div className="flex justify-start">
+            {/* Soft card glow */}
+            <div
+              className="
+                absolute
+                -inset-[1px]
+                rounded-[inherit]
+                pointer-events-none
+                border
+                border-[#DCCBFF]/70
+              "
+            />
+
+            {/* =================================================
+                LOGO
+            ================================================= */}
+            <div className="relative z-10 flex justify-start">
+
               <div
                 className="
-                  w-[54px]
-                  h-[54px]
-                  sm:w-[59px]
-                  sm:h-[59px]
-                  rounded-[18px]
+                  w-[52px]
+                  h-[52px]
+                  sm:w-[56px]
+                  sm:h-[56px]
+                  rounded-[17px]
                   bg-gradient-to-br
                   from-[#6D28D9]
                   via-[#7C3AED]
@@ -69,44 +177,93 @@ export const LoginPage: React.FC<LoginPageProps> = ({ onNavigate }) => {
                   flex
                   items-center
                   justify-center
-                  shadow-[0_0_27px_rgba(124,58,237,0.35)]
+                  shadow-[0_0_28px_rgba(124,58,237,0.30)]
                 "
               >
-                <span className="text-white font-bold text-[22.7px]">
+                <span className="text-white font-bold text-[22px]">
                   M
                 </span>
               </div>
+
             </div>
 
-            {/* Header */}
-            <div className="flex flex-col space-y-1.5">
-              <h2 className="text-[24px] sm:text-[28.9px] font-bold text-[#1F2937] leading-tight tracking-tight">
+            {/* =================================================
+                HEADER
+            ================================================= */}
+            <div className="relative z-10 flex flex-col space-y-1">
+
+              <h2
+                className="
+                  text-[25px]
+                  sm:text-[27px]
+                  lg:text-[29px]
+                  font-bold
+                  text-[#1F2937]
+                  leading-tight
+                  tracking-tight
+                "
+              >
                 Welcome Back
               </h2>
 
-              <p className="text-[13.5px] sm:text-[14.5px] text-[#6B7280] leading-normal">
+              <p
+                className="
+                  text-[12.5px]
+                  sm:text-[13.5px]
+                  lg:text-[14px]
+                  text-[#6B7280]
+                  leading-relaxed
+                "
+              >
                 Sign in to access your healthcare dashboard.
               </p>
+
             </div>
 
-            {/* Social Login Divider */}
-            <div className="relative w-full flex items-center justify-center my-1">
-              <div className="w-full border-t border-[#F0EDFF]" />
+            {/* =================================================
+                SOCIAL LOGIN DIVIDER
+            ================================================= */}
+            <div className="relative z-10 w-full flex items-center justify-center">
 
-              <span className="absolute bg-white px-3 text-[12.5px] sm:text-[13.6px] font-bold text-[#1C1C1C] whitespace-nowrap">
+              <div className="w-full border-t border-[#EDE8FA]" />
+
+              <span
+                className="
+                  absolute
+                  bg-white/95
+                  px-3
+                  text-[11px]
+                  sm:text-[12px]
+                  font-semibold
+                  text-[#24212F]
+                  whitespace-nowrap
+                "
+              >
                 Login with Others
               </span>
+
             </div>
 
-            {/* Social Buttons */}
-            <SocialLoginButtons
-              onGoogleClick={() => onNavigate('/dashboard')}
-              onMicrosoftClick={() => onNavigate('/dashboard')}
-              onAppleClick={() => onNavigate('/dashboard')}
-            />
+            {/* =================================================
+                SOCIAL BUTTONS
+            ================================================= */}
+            <div className="relative z-10">
 
-            {/* Login Form */}
-            <form onSubmit={handleSubmit} className="flex flex-col space-y-4">
+              <SocialLoginButtons
+                onGoogleClick={() => onNavigate('/dashboard')}
+                onMicrosoftClick={() => onNavigate('/dashboard')}
+                onAppleClick={() => onNavigate('/dashboard')}
+              />
+
+            </div>
+
+            {/* =================================================
+                LOGIN FORM
+            ================================================= */}
+            <form
+              onSubmit={handleSubmit}
+              className="relative z-10 flex flex-col space-y-3.5"
+            >
 
               <AuthInput
                 placeholder="User name/Email Address"
@@ -123,44 +280,52 @@ export const LoginPage: React.FC<LoginPageProps> = ({ onNavigate }) => {
                 required
               />
 
-              {/* PRIMARY SIGN IN BUTTON */}
+              {/* SIGN IN */}
               <button
                 type="submit"
                 className="
+                  auth-primary-button
                   w-full
-                  h-[50px]
-                  sm:h-[53.2px]
-                  bg-gradient-to-r
-                  from-[#6D28D9]
-                  via-[#7C3AED]
-                  to-[#8B5CF6]
-                  text-white
-                  font-bold
-                  text-[14.3px]
-                  rounded-[16.3px]
+                  h-[49px]
+                  sm:h-[52px]
+                  rounded-[15px]
                   flex
                   items-center
                   justify-center
+                  text-white
+                  font-bold
+                  text-[13px]
+                  sm:text-[14px]
+                  mt-1
                   transition-all
-                  duration-200
-                  hover:brightness-105
-                  hover:shadow-[0_8px_24px_rgba(124,58,237,0.25)]
-                  active:scale-[0.99]
-                  shadow-[0_5px_16px_rgba(124,58,237,0.18)]
-                  mt-2
+                  duration-300
                 "
               >
                 Sign In
               </button>
+
             </form>
 
-            {/* Forgot Password / Create Account */}
-            <div className="flex items-center justify-between text-[12px] sm:text-[12.6px] font-bold pt-1">
+            {/* =================================================
+                FORGOT + CREATE
+            ================================================= */}
+            <div
+              className="
+                relative
+                z-10
+                flex
+                items-center
+                justify-between
+                text-[11px]
+                sm:text-[12px]
+                font-semibold
+              "
+            >
 
               <button
                 type="button"
                 onClick={() => onNavigate('/forgot-password')}
-                className="text-[#7C3AED] hover:text-[#5B21B6] transition-colors"
+                className="purple-link"
               >
                 Forgot Password?
               </button>
@@ -168,95 +333,118 @@ export const LoginPage: React.FC<LoginPageProps> = ({ onNavigate }) => {
               <button
                 type="button"
                 onClick={() => onNavigate('/create-account')}
-                className="text-[#7C3AED] hover:text-[#5B21B6] transition-colors"
+                className="purple-link"
               >
                 Create Account
               </button>
 
             </div>
 
-            {/* Register */}
-            <div className="text-center text-[11.3px] text-[#232C2B] pt-1">
+            {/* =================================================
+                REGISTER
+            ================================================= */}
+            <div
+              className="
+                relative
+                z-10
+                text-center
+                text-[10.5px]
+                sm:text-[11px]
+                text-[#5F5B69]
+              "
+            >
               Don't have an account?{' '}
 
               <button
                 type="button"
                 onClick={() => onNavigate('/create-account')}
-                className="text-[#6D28D9] font-semibold hover:text-[#5B21B6] hover:underline"
+                className="
+                  text-[#6D28D9]
+                  font-semibold
+                  hover:text-[#5B21B6]
+                  hover:underline
+                  transition-colors
+                "
               >
                 Register
               </button>
+
             </div>
 
-            {/* Doctor / Employee Login */}
-            <div className="grid grid-cols-2 gap-3 pt-2">
+            {/* =================================================
+                DOCTOR / EMPLOYEE LOGIN
+            ================================================= */}
+            <div
+              className="
+                relative
+                z-10
+                grid
+                grid-cols-2
+                gap-2.5
+                pt-1
+              "
+            >
 
+              {/* Doctor */}
               <button
                 type="button"
                 onClick={() => onNavigate('/dashboard')}
                 className="
+                  auth-secondary-button
                   h-[48px]
-                  sm:h-[53.4px]
-                  bg-gradient-to-r
-                  from-[#6D28D9]
-                  to-[#7C3AED]
+                  sm:h-[51px]
+                  rounded-[15px]
                   text-white
                   font-bold
-                  text-[11.7px]
-                  rounded-[16.3px]
+                  text-[10.5px]
+                  sm:text-[11px]
                   flex
                   items-center
                   justify-center
                   gap-1.5
-                  transition-all
-                  duration-200
-                  hover:brightness-105
-                  hover:shadow-[0_7px_20px_rgba(124,58,237,0.22)]
-                  active:scale-[0.98]
                   px-2
-                  shadow-sm
+                  transition-all
+                  duration-300
                 "
               >
-                <UserCheck className="w-4 h-4 text-white shrink-0" />
+                <UserCheck className="w-[15px] h-[15px] shrink-0" />
                 <span>Doctor Login</span>
               </button>
 
+              {/* Employee */}
               <button
                 type="button"
                 onClick={() => onNavigate('/dashboard')}
                 className="
+                  auth-secondary-button
                   h-[48px]
-                  sm:h-[53.4px]
-                  bg-gradient-to-r
-                  from-[#6D28D9]
-                  to-[#7C3AED]
+                  sm:h-[51px]
+                  rounded-[15px]
                   text-white
                   font-bold
-                  text-[11.7px]
-                  rounded-[16.3px]
+                  text-[10.5px]
+                  sm:text-[11px]
                   flex
                   items-center
                   justify-center
                   gap-1.5
-                  transition-all
-                  duration-200
-                  hover:brightness-105
-                  hover:shadow-[0_7px_20px_rgba(124,58,237,0.22)]
-                  active:scale-[0.98]
                   px-2
-                  shadow-sm
+                  transition-all
+                  duration-300
                 "
               >
-                <Briefcase className="w-4 h-4 text-white shrink-0" />
+                <Briefcase className="w-[15px] h-[15px] shrink-0" />
                 <span>Employee Login</span>
               </button>
 
             </div>
 
           </div>
+
         </div>
 
       </div>
+
     </div>
   );
 };
